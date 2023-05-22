@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://br0cktg2wvuif"]
+
+[ext_resource type="PackedScene" uid="uid://bgpm2fl4ykcvn" path="res://Scenes/characters/scientist.tscn" id="1_ypqsd"]
+[ext_resource type="Texture2D" uid="uid://c62xklt0c4lwc" path="res://icon.svg" id="2_oc88f"]
+
+[node name="Lab" type="Node2D"]
+
+[node name="scientist" parent="." instance=ExtResource("1_ypqsd")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(5, 5)
+texture = ExtResource("2_oc88f")
