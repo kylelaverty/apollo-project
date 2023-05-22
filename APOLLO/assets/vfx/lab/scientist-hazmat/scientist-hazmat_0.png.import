@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c84fam7c3mrnm"
-path="res://.godot/imported/lab-npcs.png-016dc19dd4c36979562d64fc075b2829.ctex"
+uid="uid://7qxgssv8lbkr"
+path="res://.godot/imported/scientist-hazmat_0.png-787a32429347780655c661921064885e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vfx/lab/lab-npcs.png"
-dest_files=["res://.godot/imported/lab-npcs.png-016dc19dd4c36979562d64fc075b2829.ctex"]
+source_file="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_0.png"
+dest_files=["res://.godot/imported/scientist-hazmat_0.png-787a32429347780655c661921064885e.ctex"]
 
 [params]
 
