@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgpm2fl4ykcvn"]
+
+[ext_resource type="Script" path="res://Scenes/characters/scientist.gd" id="1_crw7t"]
+
+[node name="scientist" type="Node2D"]
+script = ExtResource("1_crw7t")
