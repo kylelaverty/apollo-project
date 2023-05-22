@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://40yhigj832fb"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1j2en"]
+size = Vector2(10, 26)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bu6qo"]
+radius = 5.0
+height = 26.0
+
+[node name="Bacteria_A" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 0.996078, 1)
+texture = SubResource("PlaceholderTexture2D_1j2en")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_bu6qo")
