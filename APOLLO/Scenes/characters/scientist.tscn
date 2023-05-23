@@ -1,18 +1,30 @@
-[gd_scene load_steps=18 format=3 uid="uid://bgpm2fl4ykcvn"]
+[gd_scene load_steps=30 format=3 uid="uid://bgpm2fl4ykcvn"]
 
 [ext_resource type="Script" path="res://Scenes/characters/scientist.gd" id="1_crw7t"]
-[ext_resource type="Texture2D" uid="uid://2b6cms5kltfc" path="res://Assets/vfx/lab/scientist/scientist_1.png" id="2_l0d0v"]
-[ext_resource type="Texture2D" uid="uid://d1sf5wxbn5oua" path="res://Assets/vfx/lab/scientist/scientist_2.png" id="3_knvvw"]
-[ext_resource type="Texture2D" uid="uid://dxa2vo4tywnn" path="res://Assets/vfx/lab/scientist/scientist_3.png" id="4_wpvtj"]
-[ext_resource type="Texture2D" uid="uid://d1bm0wmwpe53f" path="res://Assets/vfx/lab/scientist/scientist_4.png" id="5_adohh"]
-[ext_resource type="Texture2D" uid="uid://dcvy80ratfb7q" path="res://Assets/vfx/lab/scientist/scientist_5.png" id="6_m2pww"]
-[ext_resource type="Texture2D" uid="uid://qe7gnd84xb5m" path="res://Assets/vfx/lab/scientist/scientist_6.png" id="7_aemw8"]
-[ext_resource type="Texture2D" uid="uid://hxvv2dy51hcy" path="res://Assets/vfx/lab/scientist/scientist_7.png" id="8_bw1ch"]
-[ext_resource type="Texture2D" uid="uid://c2qkgqalj3hqm" path="res://Assets/vfx/lab/scientist/scientist_8.png" id="9_rk8g2"]
-[ext_resource type="Texture2D" uid="uid://dw1532pcv7431" path="res://Assets/vfx/lab/scientist/scientist_9.png" id="10_spkd2"]
-[ext_resource type="Texture2D" uid="uid://b46rfyoe0k0kf" path="res://Assets/vfx/lab/scientist/scientist_10.png" id="11_2qt1e"]
-[ext_resource type="Texture2D" uid="uid://6la76momq5j7" path="res://Assets/vfx/lab/scientist/scientist_11.png" id="12_7vxgf"]
-[ext_resource type="Texture2D" uid="uid://5b8mngtprorf" path="res://Assets/vfx/lab/scientist/scientist_12.png" id="13_ha2ev"]
+[ext_resource type="Texture2D" uid="uid://dlmckjg1sxq8a" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_4.png" id="2_3iv02"]
+[ext_resource type="Texture2D" uid="uid://cf7gwivigqltk" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_1.png" id="2_j6hnb"]
+[ext_resource type="Texture2D" uid="uid://2b6cms5kltfc" path="res://assets/vfx/lab/scientist/scientist_1.png" id="2_l0d0v"]
+[ext_resource type="Texture2D" uid="uid://cgj3hrl03gcbf" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_3.png" id="3_05l2g"]
+[ext_resource type="Texture2D" uid="uid://d1sf5wxbn5oua" path="res://assets/vfx/lab/scientist/scientist_2.png" id="3_knvvw"]
+[ext_resource type="Texture2D" uid="uid://7qxgssv8lbkr" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_0.png" id="3_p1epk"]
+[ext_resource type="Texture2D" uid="uid://bjql4t2hv82vf" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_5.png" id="4_m5h3m"]
+[ext_resource type="Texture2D" uid="uid://dxa2vo4tywnn" path="res://assets/vfx/lab/scientist/scientist_3.png" id="4_wpvtj"]
+[ext_resource type="Texture2D" uid="uid://ct25hwmmty60x" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_2.png" id="4_y1gg5"]
+[ext_resource type="Texture2D" uid="uid://ccymv373v2k8q" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_7.png" id="5_8uy0g"]
+[ext_resource type="Texture2D" uid="uid://d1bm0wmwpe53f" path="res://assets/vfx/lab/scientist/scientist_4.png" id="5_adohh"]
+[ext_resource type="Texture2D" uid="uid://k2ey2uxg1xq8" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_6.png" id="6_3m21u"]
+[ext_resource type="Texture2D" uid="uid://dcvy80ratfb7q" path="res://assets/vfx/lab/scientist/scientist_5.png" id="6_m2pww"]
+[ext_resource type="Texture2D" uid="uid://qe7gnd84xb5m" path="res://assets/vfx/lab/scientist/scientist_6.png" id="7_aemw8"]
+[ext_resource type="Texture2D" uid="uid://p30cawmjpvj1" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_8.png" id="7_dwvcg"]
+[ext_resource type="Texture2D" uid="uid://hxvv2dy51hcy" path="res://assets/vfx/lab/scientist/scientist_7.png" id="8_bw1ch"]
+[ext_resource type="Texture2D" uid="uid://c2qkgqalj3hqm" path="res://assets/vfx/lab/scientist/scientist_8.png" id="9_rk8g2"]
+[ext_resource type="Texture2D" uid="uid://dw1532pcv7431" path="res://assets/vfx/lab/scientist/scientist_9.png" id="10_spkd2"]
+[ext_resource type="Texture2D" uid="uid://b46rfyoe0k0kf" path="res://assets/vfx/lab/scientist/scientist_10.png" id="11_2qt1e"]
+[ext_resource type="Texture2D" uid="uid://drtnpbvkckgln" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_10.png" id="11_w4rxf"]
+[ext_resource type="Texture2D" uid="uid://chob2doacak1c" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_9.png" id="12_5ktgf"]
+[ext_resource type="Texture2D" uid="uid://6la76momq5j7" path="res://assets/vfx/lab/scientist/scientist_11.png" id="12_7vxgf"]
+[ext_resource type="Texture2D" uid="uid://5b8mngtprorf" path="res://assets/vfx/lab/scientist/scientist_12.png" id="13_ha2ev"]
+[ext_resource type="Texture2D" uid="uid://cndmo8r2o6aur" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_11.png" id="13_xf2s3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbs1j"]
 atlas = ExtResource("9_rk8g2")
@@ -24,6 +36,74 @@ region = Rect2(0, 0, 32, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g28wj"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j6hnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p1epk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_j6hnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y1gg5")
+}],
+"loop": true,
+"name": &"hazmat_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8uy0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3m21u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8uy0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dwvcg")
+}],
+"loop": true,
+"name": &"hazmat_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3iv02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_05l2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3iv02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m5h3m")
+}],
+"loop": true,
+"name": &"hazmat_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_w4rxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5ktgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_w4rxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xf2s3")
+}],
+"loop": true,
+"name": &"hazmat_up",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_knvvw")
@@ -109,3 +189,4 @@ position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_0gu2w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)

@@ -1,0 +1,283 @@
+[gd_scene load_steps=3 format=3 uid="uid://burdh4olynt8x"]
+
+[ext_resource type="Script" path="res://Scenes/menus/options_game_menu.gd" id="1_gxow5"]
+[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_tkgix"]
+
+[node name="options_game_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gxow5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -143.5
+offset_right = 99.0
+offset_bottom = 143.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="DamageSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/DamageSettings"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Damage Taken"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/DamageSettings"]
+layout_mode = 2
+min_value = 1.0
+max_value = 4.0
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/DamageSettings"]
+layout_mode = 2
+theme_override_constants/separation = 19
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/DamageSettings/HBoxContainer"]
+layout_mode = 2
+text = "0%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/DamageSettings/HBoxContainer"]
+layout_mode = 2
+text = "50%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/DamageSettings/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="MarginContainer/VBoxContainer/DamageSettings/HBoxContainer"]
+layout_mode = 2
+text = "150%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HealthSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HealthSettings"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Your Health"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HSlider2" type="HSlider" parent="MarginContainer/VBoxContainer/HealthSettings"]
+layout_mode = 2
+min_value = 1.0
+max_value = 4.0
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HealthSettings"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HealthSettings/HBoxContainer2"]
+layout_mode = 2
+text = "150%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HealthSettings/HBoxContainer2"]
+layout_mode = 2
+text = "100%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HealthSettings/HBoxContainer2"]
+layout_mode = 2
+text = "50%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HealthSettings/HBoxContainer2"]
+layout_mode = 2
+text = "25%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="SpeedSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/SpeedSettings"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Your Speed
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/SpeedSettings"]
+layout_mode = 2
+min_value = 1.0
+max_value = 4.0
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/SpeedSettings"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/SpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "50%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/SpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "75%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/SpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="MarginContainer/VBoxContainer/SpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "125%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="EnemySpeedSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/EnemySpeedSettings"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Enemy Speed
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/EnemySpeedSettings"]
+layout_mode = 2
+min_value = 1.0
+max_value = 4.0
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/EnemySpeedSettings"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/EnemySpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "50%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/EnemySpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "75%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/EnemySpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="MarginContainer/VBoxContainer/EnemySpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "125%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="TextSpeedSettings" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TextSpeedSettings"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Text Speed"
+fit_content = true
+autowrap_mode = 0
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/TextSpeedSettings"]
+layout_mode = 2
+min_value = 1.0
+max_value = 4.0
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TextSpeedSettings"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TextSpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "50%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TextSpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "100%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TextSpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "150%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TextSpeedSettings/HBoxContainer"]
+layout_mode = 2
+text = "200%"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+icon = ExtResource("2_tkgix")
+icon_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -214.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Version: 125.125.12.124"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

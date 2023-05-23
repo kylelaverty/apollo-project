@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bpe5a2ii7ds2i"]
 
-[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_pnh0p"]
-[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_k6efh"]
+[ext_resource type="Script" path="res://Scenes/menus/menu.gd" id="1_hqg5c"]
+[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_1g0m2"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_pnh0p")
+script = ExtResource("1_hqg5c")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -34,19 +34,19 @@ layout_mode = 2
 [node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Play"
-icon = ExtResource("2_k6efh")
+icon = ExtResource("2_1g0m2")
 icon_alignment = 1
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Options"
-icon = ExtResource("2_k6efh")
+icon = ExtResource("2_1g0m2")
 icon_alignment = 1
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
-icon = ExtResource("2_k6efh")
+icon = ExtResource("2_1g0m2")
 icon_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
