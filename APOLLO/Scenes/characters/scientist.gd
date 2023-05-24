@@ -5,6 +5,19 @@ extends CharacterBody2D
 @export var hazmat = false
 @export var speed = 150
 
+@export_category("Effort")
+@export var effort = 100
+@export var effort_hazmat = 10
+@export var effort_buff = 30
+
+@export_category("Inventory")
+@export var heatUp = false
+@export var coldUp = false
+@export var speedUp = false
+@export var slowUp = false
+@export var growUp = false
+@export var shrinkUp = false
+
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
@@ -27,7 +40,54 @@ func _physics_process(_delta):
 	move_and_slide()
 
 func _on_hazmat_zone_body_exited(_body):
+	if hazmat == false && effort > effort_hazmat:
+		effort = effort - effort_hazmat
 	hazmat = true
 
-func _on_hazmat_off_zone_body_exited(body):
+func _on_hazmat_off_zone_body_exited(_body):
+	if hazmat == true && effort > effort_hazmat:
+		effort = effort - effort_hazmat
 	hazmat = false
+
+func _on_heat_up_zone_body_entered(_body):
+	if effort >= effort_buff && heatUp != true:
+		effort = effort - effort_buff
+		heatUp = true
+
+func _on_cold_up_zone_body_entered(_body):
+	if effort >= effort_buff && coldUp != true:
+		effort = effort - effort_buff
+		coldUp = true
+
+func _on_speed_up_zone_body_entered(_body):
+	if effort >= effort_buff && speedUp != true:
+		effort = effort - effort_buff
+		speedUp = true
+
+func _on_slow_up_zone_body_entered(_body):
+	if effort >= effort_buff && slowUp != true:
+		effort = effort - effort_buff
+		slowUp = true
+
+func _on_grow_up_zone_body_entered(_body):
+	if effort >= effort_buff && growUp != true:
+		effort = effort - effort_buff
+		growUp = true
+
+func _on_shrink_up_zone_body_entered(_body):
+	if effort >= effort_buff && shrinkUp != true:
+		effort = effort - effort_buff
+		shrinkUp = true
+
+func _on_end_day_zone_body_entered(_body):
+	effort = 100
+	heatUp = false
+	coldUp = false
+	speedUp = false
+	slowUp = false
+	growUp = false
+	shrinkUp = false
+
+func _on_petri_zone_body_entered(_body):
+	# somehow send things to the other view
+	pass # Replace with function body.
