@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bg4wh4tor0xwg"]
+
+[node name="scientistHud" type="CanvasLayer"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+value = 50.0
+rounded = true
+fill_mode = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Some Indication of energy Remaining"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Inventory System"
+vertical_alignment = 2
+clip_text = true

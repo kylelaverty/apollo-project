@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bgpm2fl4ykcvn"]
+[gd_scene load_steps=31 format=3 uid="uid://bgpm2fl4ykcvn"]
 
 [ext_resource type="Script" path="res://Scenes/characters/scientist.gd" id="1_crw7t"]
 [ext_resource type="Texture2D" uid="uid://dlmckjg1sxq8a" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_4.png" id="2_3iv02"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://6la76momq5j7" path="res://assets/vfx/lab/scientist/scientist_11.png" id="12_7vxgf"]
 [ext_resource type="Texture2D" uid="uid://5b8mngtprorf" path="res://assets/vfx/lab/scientist/scientist_12.png" id="13_ha2ev"]
 [ext_resource type="Texture2D" uid="uid://cndmo8r2o6aur" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_11.png" id="13_xf2s3"]
+[ext_resource type="PackedScene" uid="uid://bg4wh4tor0xwg" path="res://Scenes/scientistHud.tscn" id="26_jqhdm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbs1j"]
 atlas = ExtResource("9_rk8g2")
@@ -175,7 +176,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0gu2w"]
 radius = 5.0
-height = 26.0
+height = 14.0
 
 [node name="scientist" type="CharacterBody2D"]
 script = ExtResource("1_crw7t")
@@ -186,8 +187,11 @@ animation = &"walk_down"
 autoplay = "walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(0, 10)
 shape = SubResource("CapsuleShape2D_0gu2w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[node name="scientistHud" parent="." instance=ExtResource("26_jqhdm")]
+layer = 10

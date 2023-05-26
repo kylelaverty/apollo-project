@@ -39,7 +39,7 @@ func _physics_process(_delta):
 	set_animation()
 	move_and_slide()
 
-func _on_hazmat_zone_body_exited(_body):
+func _on_hazmat_on_zone_body_exited(_body):
 	if hazmat == false && effort > effort_hazmat:
 		effort = effort - effort_hazmat
 	hazmat = true
@@ -54,7 +54,7 @@ func _on_heat_up_zone_body_entered(_body):
 		effort = effort - effort_buff
 		heatUp = true
 
-func _on_cold_up_zone_body_entered(_body):
+func _on_heat_down_zone_body_entered(_body):
 	if effort >= effort_buff && coldUp != true:
 		effort = effort - effort_buff
 		coldUp = true
@@ -64,17 +64,17 @@ func _on_speed_up_zone_body_entered(_body):
 		effort = effort - effort_buff
 		speedUp = true
 
-func _on_slow_up_zone_body_entered(_body):
+func _on_speed_down_zone_body_entered(_body):
 	if effort >= effort_buff && slowUp != true:
 		effort = effort - effort_buff
 		slowUp = true
 
-func _on_grow_up_zone_body_entered(_body):
+func _on_size_up_zone_body_entered(_body):
 	if effort >= effort_buff && growUp != true:
 		effort = effort - effort_buff
 		growUp = true
 
-func _on_shrink_up_zone_body_entered(_body):
+func _on_size_down_zone_body_entered(_body):
 	if effort >= effort_buff && shrinkUp != true:
 		effort = effort - effort_buff
 		shrinkUp = true

@@ -44,6 +44,7 @@ layout_mode = 2
 min_value = 1.0
 max_value = 4.0
 value = 1.0
+editable = false
 tick_count = 4
 ticks_on_borders = true
 
@@ -90,6 +91,7 @@ layout_mode = 2
 min_value = 1.0
 max_value = 4.0
 value = 1.0
+editable = false
 tick_count = 4
 ticks_on_borders = true
 
@@ -137,6 +139,7 @@ layout_mode = 2
 min_value = 1.0
 max_value = 4.0
 value = 1.0
+editable = false
 tick_count = 4
 ticks_on_borders = true
 
@@ -184,6 +187,7 @@ layout_mode = 2
 min_value = 1.0
 max_value = 4.0
 value = 1.0
+editable = false
 tick_count = 4
 ticks_on_borders = true
 
@@ -230,6 +234,7 @@ layout_mode = 2
 min_value = 1.0
 max_value = 4.0
 value = 1.0
+editable = false
 tick_count = 4
 ticks_on_borders = true
 

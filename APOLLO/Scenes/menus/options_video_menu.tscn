@@ -1,0 +1,94 @@
+[gd_scene load_steps=3 format=3 uid="uid://pdaxtjeux8tk"]
+
+[ext_resource type="Script" path="res://Scenes/menus/options_video_menu.gd" id="1_4pm26"]
+[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_tobr2"]
+
+[node name="options_video_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4pm26")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -143.5
+offset_right = 99.0
+offset_bottom = 143.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Window" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Window" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Window"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Window"
+fit_content = true
+autowrap_mode = 0
+
+[node name="WindowSettings" type="OptionButton" parent="MarginContainer/VBoxContainer/Window"]
+layout_mode = 2
+item_count = 3
+selected = 2
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Borderless Window"
+popup/item_1/id = 1
+popup/item_2/text = "Fullscreen"
+popup/item_2/id = 2
+
+[node name="Resolution" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Resolution" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Resolution"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Resolution
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Resolutions" type="OptionButton" parent="MarginContainer/VBoxContainer/Resolution"]
+layout_mode = 2
+item_count = 3
+selected = 2
+popup/item_0/text = "800x600"
+popup/item_0/id = 0
+popup/item_1/text = "1024x768"
+popup/item_1/id = 1
+popup/item_2/text = "1280x1024"
+popup/item_2/id = 2
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+icon = ExtResource("2_tobr2")
+icon_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -214.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Version: 125.125.12.124"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
