@@ -2,21 +2,19 @@ extends CharacterBody2D
 
 @onready var _animated_sprite = $AnimatedSprite2D
 
-@export var hazmat = false
-@export var speed = 150
+@export var inventory_data: InventoryData
+
+@export var hazmat: bool = false
+@export var speed: int = 150
 
 @export_category("Effort")
-@export var effort = 100
-@export var effort_hazmat = 10
-@export var effort_buff = 30
+@export var effort: int = 100
+@export var effort_hazmat: int = 10
+@export var effort_buff: int = 30
 
 @export_category("Inventory")
-@export var heatUp = false
-@export var coldUp = false
-@export var speedUp = false
-@export var slowUp = false
-@export var growUp = false
-@export var shrinkUp = false
+@export var growUp: bool = false
+@export var shrinkUp: bool = false
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -50,24 +48,28 @@ func _on_hazmat_off_zone_body_exited(_body):
 	hazmat = false
 
 func _on_heat_up_zone_body_entered(_body):
-	if effort >= effort_buff && heatUp != true:
+	if effort >= effort_buff:
 		effort = effort - effort_buff
-		heatUp = true
+		inventory_data.slot_datas[2].set_quantity(inventory_data.slot_datas[2].quantity+1)
+		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_heat_down_zone_body_entered(_body):
-	if effort >= effort_buff && coldUp != true:
+	if effort >= effort_buff:
 		effort = effort - effort_buff
-		coldUp = true
+		inventory_data.slot_datas[3].set_quantity(inventory_data.slot_datas[3].quantity+1)
+		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_speed_up_zone_body_entered(_body):
-	if effort >= effort_buff && speedUp != true:
+	if effort >= effort_buff:
 		effort = effort - effort_buff
-		speedUp = true
+		inventory_data.slot_datas[0].set_quantity(inventory_data.slot_datas[0].quantity+1)
+		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_speed_down_zone_body_entered(_body):
-	if effort >= effort_buff && slowUp != true:
+	if effort >= effort_buff:
 		effort = effort - effort_buff
-		slowUp = true
+		inventory_data.slot_datas[1].set_quantity(inventory_data.slot_datas[1].quantity+1)
+		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_size_up_zone_body_entered(_body):
 	if effort >= effort_buff && growUp != true:
@@ -78,15 +80,6 @@ func _on_size_down_zone_body_entered(_body):
 	if effort >= effort_buff && shrinkUp != true:
 		effort = effort - effort_buff
 		shrinkUp = true
-
-func _on_end_day_zone_body_entered(_body):
-	effort = 100
-	heatUp = false
-	coldUp = false
-	speedUp = false
-	slowUp = false
-	growUp = false
-	shrinkUp = false
 
 func _on_petri_zone_body_entered(_body):
 	# somehow send things to the other view

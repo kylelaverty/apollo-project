@@ -1,9 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://de37htxj8jj1"]
+[gd_scene load_steps=20 format=3 uid="uid://de37htxj8jj1"]
 
 [ext_resource type="PackedScene" uid="uid://bgpm2fl4ykcvn" path="res://Scenes/characters/scientist.tscn" id="1_dj05u"]
 [ext_resource type="Texture2D" uid="uid://dqgoxc857few8" path="res://assets/vfx/lab/tilesFloor.png" id="1_go1jf"]
+[ext_resource type="Script" path="res://Scenes/ScienceLab.gd" id="1_pj802"]
 [ext_resource type="Texture2D" uid="uid://cuymxsw6kvcdn" path="res://assets/vfx/lab/tilesStuff.png" id="2_gw7uv"]
 [ext_resource type="Texture2D" uid="uid://cg6rirvsv2gve" path="res://assets/vfx/lab/tilesWalls.png" id="3_26duk"]
+[ext_resource type="PackedScene" uid="uid://b11vtwpdr5be1" path="res://inventory/inventory.tscn" id="5_5qii0"]
+[ext_resource type="Resource" uid="uid://diwkrc28qvanr" path="res://test_inv.tres" id="5_mx6yn"]
+[ext_resource type="Script" path="res://inventory/inventory_interface.gd" id="7_0ccdq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6oxh2"]
 texture = ExtResource("1_go1jf")
@@ -5673,12 +5677,13 @@ size = Vector2(28.5, 84)
 size = Vector2(1.62353, 10.6543)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ikks"]
-size = Vector2(14, 2.99723)
+size = Vector2(17.7913, 2.99723)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_261qy"]
 size = Vector2(14, 20.119)
 
 [node name="ScienceLab" type="Node2D"]
+script = ExtResource("1_pj802")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -5696,7 +5701,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 1
-layer_1/tile_data = PackedInt32Array(589865, 655360, 1, 655401, 655360, 2, 589866, 720896, 1, 655402, 720896, 2, 983077, 655360, 1, 1048613, 655360, 2, 983078, 720896, 1, 1048614, 720896, 2, 655372, 655360, 1, 720908, 655360, 2, 655373, 720896, 1, 720909, 720896, 2, 655365, 655360, 1, 720901, 655360, 2, 655366, 720896, 1, 720902, 720896, 2, 1048581, 655360, 1, 1114117, 655360, 2, 1048582, 720896, 1, 1114118, 720896, 2, 1048588, 655360, 1, 1114124, 655360, 2, 1048589, 720896, 1, 1114125, 720896, 2, 1507340, 655360, 1, 1572876, 655360, 2, 1507341, 720896, 1, 1572877, 720896, 2, 1507333, 655360, 1, 1572869, 655360, 2, 1507334, 720896, 1, 1572870, 720896, 2, 1966085, 655360, 1, 2031621, 655360, 2, 1966086, 720896, 1, 2031622, 720896, 2, 1966092, 655360, 1, 2031628, 655360, 2, 1966093, 720896, 1, 2031629, 720896, 2, 2293777, 655360, 1, 2359313, 655360, 2, 2293778, 720896, 1, 2359314, 720896, 2)
+layer_1/tile_data = PackedInt32Array(589865, 655360, 1, 655401, 655360, 2, 589866, 720896, 1, 655402, 720896, 2, 983077, 655360, 1, 1048613, 655360, 2, 983078, 720896, 1, 1048614, 720896, 2, 655365, 655360, 1, 720901, 655360, 2, 655366, 720896, 1, 720902, 720896, 2, 1048581, 655360, 1, 1114117, 655360, 2, 1048582, 720896, 1, 1114118, 720896, 2, 1507333, 655360, 1, 1572869, 655360, 2, 1507334, 720896, 1, 1572870, 720896, 2, 1966085, 655360, 1, 2031621, 655360, 2, 1966086, 720896, 1, 2031622, 720896, 2, 2293777, 655360, 1, 2359313, 655360, 2, 2293778, 720896, 1, 2359314, 720896, 2)
 layer_2/name = "Ground Objects"
 layer_2/enabled = true
 layer_2/modulate = Color(1, 1, 1, 1)
@@ -5719,10 +5724,6 @@ layer_4/y_sort_origin = 0
 layer_4/z_index = 4
 layer_4/tile_data = PackedInt32Array(983082, 3932161, 4, 393256, 4194305, 0, 393259, 4194305, 2, 1310726, 3932161, 4, 1769485, 4194305, 12, 1769478, 3932161, 12, 393222, 4325377, 24, 393229, 3407873, 22, 851982, 4194305, 22, 917518, 4194305, 23, 851983, 4259841, 22, 917519, 4259841, 23, 851979, 4194305, 22, 917515, 4194305, 23, 851980, 4259841, 22, 917516, 4259841, 23, 917510, 3932161, 2, 1310733, 3801089, 0, 2359309, 3276801, 28, 327714, 3997697, 14, 327717, 3997697, 14)
 
-[node name="scientist" parent="." instance=ExtResource("1_dj05u")]
-z_index = 5
-position = Vector2(385, 148)
-
 [node name="InteractiveZones" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -5735,7 +5736,7 @@ rotation = 3.14159
 scale = Vector2(15.8169, 2.63043)
 
 [node name="HeatDownCollision" type="CollisionShape2D" parent="InteractiveZones/HeatDownZone"]
-position = Vector2(-13.1189, -66.9092)
+position = Vector2(-6.0694, -146.364)
 shape = SubResource("RectangleShape2D_uyety")
 
 [node name="HeatUpZone" type="Area2D" parent="InteractiveZones"]
@@ -5773,7 +5774,8 @@ z_index = 5
 scale = Vector2(-1.00555, 6.00552)
 
 [node name="SpeedDownCollision" type="CollisionShape2D" parent="InteractiveZones/SpeedDownZone"]
-position = Vector2(-207, 45.2916)
+position = Vector2(-96.4646, 82.5907)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2ikks")
 
 [node name="SizeUpZone" type="Area2D" parent="InteractiveZones"]
@@ -5793,6 +5795,29 @@ scale = Vector2(0.927031, -2.28523)
 position = Vector2(656, -111.447)
 scale = Vector2(1.44004, 0.448875)
 shape = SubResource("RectangleShape2D_261qy")
+
+[node name="scientist" parent="." instance=ExtResource("1_dj05u")]
+z_index = 6
+position = Vector2(353, 182)
+inventory_data = ExtResource("5_mx6yn")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InventoryInterface" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_0ccdq")
+
+[node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("5_5qii0")]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
 
 [connection signal="body_entered" from="InteractiveZones/HeatDownZone" to="scientist" method="_on_heat_down_zone_body_entered"]
 [connection signal="body_entered" from="InteractiveZones/HeatUpZone" to="scientist" method="_on_heat_up_zone_body_entered"]

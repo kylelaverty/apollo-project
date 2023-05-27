@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://gqr76ej3km1p"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_upsyp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jurkd"]
+load_path = "res://.godot/imported/tochLit.png-80885dabd75756283fb33bbaf9da0d7e.ctex"
+
+[resource]
+script = ExtResource("1_upsyp")
+name = "Heat Up"
+description = "Increases the heat level of the cell"
+stackable = true
+texture = SubResource("CompressedTexture2D_jurkd")

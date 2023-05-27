@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bf3ik0k6u6x7h"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_gqaq1"]
+[ext_resource type="Texture2D" uid="uid://bnjvwrrny4gu" path="res://assets/vfx/lab/items/mushroomRed.png" id="2_q3w8f"]
+
+[resource]
+script = ExtResource("1_gqaq1")
+name = "Size Up"
+description = "Make the cell get bigger"
+stackable = true
+texture = ExtResource("2_q3w8f")

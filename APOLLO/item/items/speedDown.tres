@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bbqtjtdcbkx01"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_yxh1k"]
+[ext_resource type="Texture2D" uid="uid://c6umylimebxhw" path="res://assets/vfx/lab/items/snailWalk1.png" id="2_d5wce"]
+
+[resource]
+script = ExtResource("1_yxh1k")
+name = "Speed Down"
+description = "Make the cell go slower"
+stackable = true
+texture = ExtResource("2_d5wce")

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@export var inventory_data: InventoryData
+
 @export var isSelected = false
 @export var speed = 300.0
 @export var doubling_rate = 8.0

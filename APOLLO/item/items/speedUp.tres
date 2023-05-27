@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dg8xrq6qrycng"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_cu2aq"]
+[ext_resource type="Texture2D" uid="uid://b8t8unw1xgog8" path="res://assets/vfx/lab/items/hud_gem_green.png" id="2_wkidx"]
+
+[resource]
+script = ExtResource("1_cu2aq")
+name = "Speed Up"
+description = "Make the cell go faster"
+stackable = true
+texture = ExtResource("2_wkidx")

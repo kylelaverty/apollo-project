@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bmn2ynowetba4"]
+
+[ext_resource type="Script" path="res://item/item_data.gd" id="1_7k0h1"]
+[ext_resource type="Texture2D" uid="uid://bbhy23a4ltow1" path="res://assets/vfx/lab/items/mushroomBrown.png" id="2_si6cn"]
+
+[resource]
+script = ExtResource("1_7k0h1")
+name = "Size Down"
+description = "Makes the cell shrink"
+stackable = true
+texture = ExtResource("2_si6cn")
