@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://pdaxtjeux8tk"]
+[gd_scene load_steps=4 format=3 uid="uid://pdaxtjeux8tk"]
 
 [ext_resource type="Script" path="res://Scenes/menus/options_video_menu.gd" id="1_4pm26"]
 [ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_tobr2"]
+[ext_resource type="PackedScene" uid="uid://u8nxi8olif37" path="res://Scenes/menus/ButtonClick.tscn" id="3_6p36m"]
 
 [node name="options_video_menu" type="Control"]
 layout_mode = 3
@@ -11,6 +12,22 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4pm26")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.498
+anchor_top = 0.244
+anchor_right = 0.498
+anchor_bottom = 0.244
+offset_left = -156.44
+offset_top = -32.68
+offset_right = 155.56
+offset_bottom = 33.32
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "Video Options"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -90,5 +107,7 @@ offset_top = -26.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Version: 125.125.12.124"
+
+[node name="ButtonClick" parent="." instance=ExtResource("3_6p36m")]
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

@@ -5775,7 +5775,6 @@ scale = Vector2(-1.00555, 6.00552)
 
 [node name="SpeedDownCollision" type="CollisionShape2D" parent="InteractiveZones/SpeedDownZone"]
 position = Vector2(-96.4646, 82.5907)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_2ikks")
 
 [node name="SizeUpZone" type="Area2D" parent="InteractiveZones"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://u8nxi8olif37"]
+
+[ext_resource type="AudioStream" uid="uid://c7jpjmjfon3lh" path="res://assets/sfx/click1.ogg" id="1_7mbrq"]
+
+[node name="ButtonClick" type="AudioStreamPlayer"]
+stream = ExtResource("1_7mbrq")
+volume_db = -10.557
