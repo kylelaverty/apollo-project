@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxixihdkg0u8x"]
+
+[ext_resource type="Texture2D" uid="uid://dkd4fql46qkuk" path="res://Assets/vfx/lab/items/torch.png" id="1_4go0v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pma2q"]
+radius = 13.0
+height = 58.0
+
+[node name="HeatDown" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4go0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_pma2q")

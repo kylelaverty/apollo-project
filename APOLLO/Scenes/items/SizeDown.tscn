@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr67u1aejtggs"]
+
+[ext_resource type="Texture2D" uid="uid://bbhy23a4ltow1" path="res://Assets/vfx/lab/items/mushroomBrown.png" id="1_unvbi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_khvjp"]
+radius = 16.1245
+
+[node name="SizeDown" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_unvbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 19)
+shape = SubResource("CircleShape2D_khvjp")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj84j24rx2c06"]
+
+[ext_resource type="Texture2D" uid="uid://dlho33caww3td" path="res://Assets/vfx/lab/items/tochLit.png" id="1_fp00b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dm040"]
+radius = 15.0
+height = 60.0
+
+[node name="HeatUp" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_fp00b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dm040")

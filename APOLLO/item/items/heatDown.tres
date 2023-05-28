@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://item/item_data.gd" id="1_dyoys"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8r787"]
-load_path = "res://.godot/imported/torch.png-93ddfb2163a82459fa208dd07f0c0ea3.ctex"
 
 [resource]
 script = ExtResource("1_dyoys")

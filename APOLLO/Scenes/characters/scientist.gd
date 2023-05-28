@@ -79,7 +79,7 @@ func _on_speed_down_zone_body_entered(_body):
 func _on_size_up_zone_body_entered(_body):
 	if effort >= effort_buff:
 		effort = effort - effort_buff
-		inventory_data.slot_datas[4].set_quantity(inventory_data.slot_datas[4].squantity+1)
+		inventory_data.slot_datas[4].set_quantity(inventory_data.slot_datas[4].quantity+1)
 		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_size_down_zone_body_entered(_body):

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://1jaua2a2j8eg"]
+
+[ext_resource type="Texture2D" uid="uid://c6umylimebxhw" path="res://Assets/vfx/lab/items/snailWalk1.png" id="1_lw1ia"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0mhqx"]
+radius = 18.0
+height = 50.0
+
+[node name="SpeedDown" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_lw1ia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_0mhqx")
