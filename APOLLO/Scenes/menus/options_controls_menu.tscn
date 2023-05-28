@@ -1,0 +1,108 @@
+[gd_scene load_steps=13 format=3 uid="uid://bq2yfctp3o718"]
+
+[ext_resource type="Script" path="res://Scenes/menus/options_controls_menu.gd" id="1_lhjhw"]
+[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_4uyd5"]
+[ext_resource type="Texture2D" uid="uid://cvj08sj1muaev" path="res://assets/vfx/menus/controls/left_key.png" id="2_jlag3"]
+[ext_resource type="PackedScene" uid="uid://cuvmqsin8iyjg" path="res://Scenes/menus/Version.tscn" id="3_4ao2s"]
+[ext_resource type="Texture2D" uid="uid://bkcenujw3otv4" path="res://assets/vfx/menus/controls/right_key.png" id="3_k0dqn"]
+[ext_resource type="Texture2D" uid="uid://4jmakmd6anl3" path="res://assets/vfx/menus/controls/up_key.png" id="4_0w7ep"]
+[ext_resource type="PackedScene" uid="uid://u8nxi8olif37" path="res://Scenes/menus/ButtonClick.tscn" id="4_gw7wj"]
+[ext_resource type="Texture2D" uid="uid://ss4ta5lawobo" path="res://assets/vfx/menus/controls/down_key.png" id="5_of3k2"]
+[ext_resource type="Texture2D" uid="uid://dx8gvr0fb5lrg" path="res://assets/vfx/menus/controls/a_key.png" id="6_cnh34"]
+[ext_resource type="Texture2D" uid="uid://chtd6741q7pds" path="res://assets/vfx/menus/controls/d_key.png" id="7_5nd4y"]
+[ext_resource type="Texture2D" uid="uid://dmyl3eui7nk83" path="res://assets/vfx/menus/controls/w_key.png" id="8_8lnqe"]
+[ext_resource type="Texture2D" uid="uid://oxh7iyu87tk8" path="res://assets/vfx/menus/controls/s_key.png" id="9_0imp3"]
+
+[node name="options_credits_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhjhw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.5
+offset_top = -90.5
+offset_right = 153.5
+offset_bottom = 90.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 19
+
+[node name="Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/bold_font_size = 45
+bbcode_enabled = true
+text = "[center][u]Controls[/u][/center]"
+fit_content = true
+
+[node name="Movement" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[u]Movement[/u]                     or      "
+fit_content = true
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(104, 103)
+scale = Vector2(2, 2)
+texture = ExtResource("2_jlag3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(154, 103)
+scale = Vector2(2, 2)
+texture = ExtResource("3_k0dqn")
+
+[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(129, 76)
+scale = Vector2(2, 2)
+texture = ExtResource("4_0w7ep")
+
+[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(129, 103)
+scale = Vector2(1.9375, 2)
+texture = ExtResource("5_of3k2")
+
+[node name="Sprite2D5" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(207, 103)
+scale = Vector2(2, 2)
+texture = ExtResource("6_cnh34")
+
+[node name="Sprite2D6" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(259, 103)
+scale = Vector2(2, 2)
+texture = ExtResource("7_5nd4y")
+
+[node name="Sprite2D7" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(233, 76)
+scale = Vector2(2, 2)
+texture = ExtResource("8_8lnqe")
+
+[node name="Sprite2D8" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(233, 103)
+scale = Vector2(2, 2)
+texture = ExtResource("9_0imp3")
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+icon = ExtResource("2_4uyd5")
+icon_alignment = 1
+
+[node name="Version" parent="." instance=ExtResource("3_4ao2s")]
+layout_mode = 1
+
+[node name="ButtonClick" parent="." instance=ExtResource("4_gw7wj")]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

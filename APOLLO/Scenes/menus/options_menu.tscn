@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://kwa0us0dd6v3"]
+[gd_scene load_steps=5 format=3 uid="uid://kwa0us0dd6v3"]
 
 [ext_resource type="Script" path="res://Scenes/menus/options_menu.gd" id="1_akte7"]
 [ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_p7d42"]
 [ext_resource type="PackedScene" uid="uid://u8nxi8olif37" path="res://Scenes/menus/ButtonClick.tscn" id="3_1rd1k"]
+[ext_resource type="PackedScene" uid="uid://cuvmqsin8iyjg" path="res://Scenes/menus/Version.tscn" id="3_qubi1"]
 
 [node name="options_menu" type="Control"]
 layout_mode = 3
@@ -17,13 +18,13 @@ script = ExtResource("1_akte7")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.24
+anchor_top = 0.206
 anchor_right = 0.5
-anchor_bottom = 0.24
+anchor_bottom = 0.206
 offset_left = -90.0
-offset_top = -32.8
+offset_top = -36.32
 offset_right = 92.0
-offset_bottom = 33.2
+offset_bottom = 29.68
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 45
@@ -69,6 +70,13 @@ text = "Sound
 icon = ExtResource("2_p7d42")
 icon_alignment = 1
 
+[node name="Controls" type="Button" parent="MarginContainer/MainContainer/ButtonContainer"]
+layout_mode = 2
+text = "Controls
+"
+icon = ExtResource("2_p7d42")
+icon_alignment = 1
+
 [node name="Credits" type="Button" parent="MarginContainer/MainContainer/ButtonContainer"]
 layout_mode = 2
 text = "Credits
@@ -82,23 +90,14 @@ text = "Back"
 icon = ExtResource("2_p7d42")
 icon_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Version" parent="." instance=ExtResource("3_qubi1")]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -214.0
-offset_top = -26.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Version: 125.125.12.124"
 
 [node name="ButtonClick" parent="." instance=ExtResource("3_1rd1k")]
 
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonContainer/Game" to="." method="_on_game_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonContainer/Video" to="." method="_on_video_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonContainer/Sound" to="." method="_on_sound_pressed"]
+[connection signal="pressed" from="MarginContainer/MainContainer/ButtonContainer/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="MarginContainer/MainContainer/ButtonContainer/Back" to="." method="_on_back_pressed"]

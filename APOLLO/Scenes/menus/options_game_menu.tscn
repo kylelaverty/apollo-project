@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://burdh4olynt8x"]
+[gd_scene load_steps=5 format=3 uid="uid://burdh4olynt8x"]
 
 [ext_resource type="Script" path="res://Scenes/menus/options_game_menu.gd" id="1_gxow5"]
 [ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_tkgix"]
+[ext_resource type="PackedScene" uid="uid://cuvmqsin8iyjg" path="res://Scenes/menus/Version.tscn" id="3_0j72m"]
 [ext_resource type="PackedScene" uid="uid://u8nxi8olif37" path="res://Scenes/menus/ButtonClick.tscn" id="3_h6enw"]
 
 [node name="options_game_menu" type="Control"]
@@ -289,18 +290,8 @@ text = "Back"
 icon = ExtResource("2_tkgix")
 icon_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Version" parent="." instance=ExtResource("3_0j72m")]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -214.0
-offset_top = -26.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Version: 125.125.12.124"
 
 [node name="ButtonClick" parent="." instance=ExtResource("3_h6enw")]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpe5a2ii7ds2i"]
+[gd_scene load_steps=5 format=3 uid="uid://bpe5a2ii7ds2i"]
 
 [ext_resource type="Script" path="res://Scenes/menus/menu.gd" id="1_hqg5c"]
 [ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_1g0m2"]
 [ext_resource type="PackedScene" uid="uid://u8nxi8olif37" path="res://Scenes/menus/ButtonClick.tscn" id="3_3owql"]
+[ext_resource type="PackedScene" uid="uid://cuvmqsin8iyjg" path="res://Scenes/menus/Version.tscn" id="3_t8nbv"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -66,18 +67,8 @@ text = "Quit"
 icon = ExtResource("2_1g0m2")
 icon_alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Version" parent="." instance=ExtResource("3_t8nbv")]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -130.0
-offset_top = -26.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Version: 0.0.0.1"
 
 [node name="ButtonClick" parent="." instance=ExtResource("3_3owql")]
 

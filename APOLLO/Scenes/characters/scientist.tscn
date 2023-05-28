@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bgpm2fl4ykcvn"]
+[gd_scene load_steps=31 format=3 uid="uid://bgpm2fl4ykcvn"]
 
 [ext_resource type="Script" path="res://Scenes/characters/scientist.gd" id="1_crw7t"]
 [ext_resource type="Texture2D" uid="uid://dlmckjg1sxq8a" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_4.png" id="2_3iv02"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://6la76momq5j7" path="res://assets/vfx/lab/scientist/scientist_11.png" id="12_7vxgf"]
 [ext_resource type="Texture2D" uid="uid://5b8mngtprorf" path="res://assets/vfx/lab/scientist/scientist_12.png" id="13_ha2ev"]
 [ext_resource type="Texture2D" uid="uid://cndmo8r2o6aur" path="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_11.png" id="13_xf2s3"]
+[ext_resource type="AudioStream" uid="uid://dy48wymi1p7t8" path="res://assets/sfx/footstep.wav" id="26_nwwyk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vbs1j"]
 atlas = ExtResource("9_rk8g2")
@@ -191,3 +192,11 @@ shape = SubResource("CapsuleShape2D_0gu2w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_nwwyk")
+volume_db = -20.0
+pitch_scale = 0.8
+
+[node name="FootstepsTimer" type="Timer" parent="."]
+one_shot = true

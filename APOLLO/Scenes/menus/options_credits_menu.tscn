@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3g8p7knlxbjc"]
+
+[ext_resource type="Script" path="res://Scenes/menus/options_credits_menu.gd" id="1_qc2y0"]
+[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_n3vso"]
+[ext_resource type="PackedScene" uid="uid://cuvmqsin8iyjg" path="res://Scenes/menus/Version.tscn" id="3_ct0ly"]
+[ext_resource type="PackedScene" uid="uid://u8nxi8olif37" path="res://Scenes/menus/ButtonClick.tscn" id="4_0qs62"]
+
+[node name="options_credits_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qc2y0")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = -89.5
+offset_right = 99.0
+offset_bottom = 89.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 45
+theme_override_font_sizes/bold_font_size = 45
+bbcode_enabled = true
+text = "[center][u]Credits[/u][/center]"
+fit_content = true
+
+[node name="CodersLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][u]Coders[/u][/center]"
+fit_content = true
+
+[node name="Coders" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Rhonan
+"
+
+[node name="Coders2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "TiaMagus
+"
+
+[node name="IdeaManLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][u]Idea Man[/u][/center]"
+fit_content = true
+
+[node name="IdeaMan" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Ben"
+
+[node name="VisualAssetsLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][u]Visual Assets[/u][/center]"
+fit_content = true
+
+[node name="VisualAssets" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Kenney.nl
+Land of Pixels - Laboratory Tileset (marceles)"
+
+[node name="SoundAssetsLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][u]Sound Assets[/u][/center]"
+fit_content = true
+
+[node name="SoundAssets" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Kenney.nl
+FreeSFX (Kronbits)
+Short Loopable - Background Music (joshuuu)
+"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back"
+icon = ExtResource("2_n3vso")
+icon_alignment = 1
+
+[node name="Version" parent="." instance=ExtResource("3_ct0ly")]
+layout_mode = 1
+
+[node name="ButtonClick" parent="." instance=ExtResource("4_0qs62")]
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

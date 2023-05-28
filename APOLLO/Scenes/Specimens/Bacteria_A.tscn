@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://40yhigj832fb"]
+[gd_scene load_steps=4 format=3 uid="uid://40yhigj832fb"]
 
 [ext_resource type="Script" path="res://Scripts/Bacteria_A.gd" id="1_wj57a"]
-[ext_resource type="Resource" uid="uid://diwkrc28qvanr" path="res://test_inv.tres" id="2_6oa0j"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1j2en"]
 size = Vector2(10, 26)
@@ -13,7 +12,6 @@ height = 26.0
 [node name="Bacteria_A" type="CharacterBody2D"]
 input_pickable = true
 script = ExtResource("1_wj57a")
-inventory_data = ExtResource("2_6oa0j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 0.996078, 1)

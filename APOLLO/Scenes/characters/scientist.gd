@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 @onready var _animated_sprite = $AnimatedSprite2D
+@onready var _footsteps = $Footsteps
+@onready var _footsteps_timer = $FootstepsTimer
 
 @export var inventory_data: InventoryData
 
@@ -9,12 +11,8 @@ extends CharacterBody2D
 
 @export_category("Effort")
 @export var effort: int = 100
-@export var effort_hazmat: int = 10
-@export var effort_buff: int = 30
-
-@export_category("Inventory")
-@export var growUp: bool = false
-@export var shrinkUp: bool = false
+@export var effort_hazmat: int = 5
+@export var effort_buff: int = 25
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -32,9 +30,16 @@ func set_animation():
 	else:
 		_animated_sprite.stop()
 
+func play_sound():
+	if velocity != Vector2.ZERO and !_footsteps.playing and _footsteps_timer.time_left <= 0:
+		_footsteps.pitch_scale = randf_range(0.8, 1.2)
+		_footsteps.play()
+		_footsteps_timer.start(0.35)
+
 func _physics_process(_delta):
 	get_input()
 	set_animation()
+	play_sound()
 	move_and_slide()
 
 func _on_hazmat_on_zone_body_exited(_body):
@@ -72,15 +77,16 @@ func _on_speed_down_zone_body_entered(_body):
 		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_size_up_zone_body_entered(_body):
-	if effort >= effort_buff && growUp != true:
+	if effort >= effort_buff:
 		effort = effort - effort_buff
-		growUp = true
+		inventory_data.slot_datas[4].set_quantity(inventory_data.slot_datas[4].squantity+1)
+		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_size_down_zone_body_entered(_body):
-	if effort >= effort_buff && shrinkUp != true:
+	if effort >= effort_buff:
 		effort = effort - effort_buff
-		shrinkUp = true
+		inventory_data.slot_datas[5].set_quantity(inventory_data.slot_datas[5].quantity+1)
+		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_petri_zone_body_entered(_body):
-	# somehow send things to the other view
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/PetriDish.tscn")

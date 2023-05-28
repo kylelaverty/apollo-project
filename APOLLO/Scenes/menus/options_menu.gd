@@ -24,3 +24,9 @@ func _on_sound_pressed():
 func _on_credits_pressed():
 	button_click.play()
 	await button_click.finished
+	get_tree().change_scene_to_file("res://Scenes/menus/options_credits_menu.tscn")
+
+func _on_controls_pressed():
+	button_click.play()
+	await button_click.finished
+	get_tree().change_scene_to_file("res://Scenes/menus/options_controls_menu.tscn")

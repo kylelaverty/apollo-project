@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://de37htxj8jj1"]
+[gd_scene load_steps=21 format=3 uid="uid://de37htxj8jj1"]
 
 [ext_resource type="PackedScene" uid="uid://bgpm2fl4ykcvn" path="res://Scenes/characters/scientist.tscn" id="1_dj05u"]
 [ext_resource type="Texture2D" uid="uid://dqgoxc857few8" path="res://assets/vfx/lab/tilesFloor.png" id="1_go1jf"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b11vtwpdr5be1" path="res://inventory/inventory.tscn" id="5_5qii0"]
 [ext_resource type="Resource" uid="uid://diwkrc28qvanr" path="res://test_inv.tres" id="5_mx6yn"]
 [ext_resource type="Script" path="res://inventory/inventory_interface.gd" id="7_0ccdq"]
+[ext_resource type="PackedScene" uid="uid://cqdxspikgvo0l" path="res://Scenes/characters/staminabar.tscn" id="7_3fyuj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6oxh2"]
 texture = ExtResource("1_go1jf")
@@ -5795,28 +5796,51 @@ position = Vector2(656, -111.447)
 scale = Vector2(1.44004, 0.448875)
 shape = SubResource("RectangleShape2D_261qy")
 
+[node name="PetriZone" type="Area2D" parent="InteractiveZones"]
+z_index = 5
+scale = Vector2(0.927031, -2.28523)
+
+[node name="PetriCollision" type="CollisionShape2D" parent="InteractiveZones/PetriZone"]
+position = Vector2(309.591, -252.053)
+scale = Vector2(1.44004, 0.448875)
+shape = SubResource("RectangleShape2D_261qy")
+
 [node name="scientist" parent="." instance=ExtResource("1_dj05u")]
 z_index = 6
 position = Vector2(353, 182)
 inventory_data = ExtResource("5_mx6yn")
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="StaminaBar" parent="UI" instance=ExtResource("7_3fyuj")]
 
 [node name="InventoryInterface" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = 151.0
+offset_right = -177.0
+offset_bottom = 151.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("7_0ccdq")
 
 [node name="PlayerInventory" parent="UI/InventoryInterface" instance=ExtResource("5_5qii0")]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 50.0
-offset_bottom = 50.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [connection signal="body_entered" from="InteractiveZones/HeatDownZone" to="scientist" method="_on_heat_down_zone_body_entered"]
 [connection signal="body_entered" from="InteractiveZones/HeatUpZone" to="scientist" method="_on_heat_up_zone_body_entered"]
@@ -5826,3 +5850,4 @@ offset_bottom = 50.0
 [connection signal="body_entered" from="InteractiveZones/SpeedDownZone" to="scientist" method="_on_speed_down_zone_body_entered"]
 [connection signal="body_entered" from="InteractiveZones/SizeUpZone" to="scientist" method="_on_size_up_zone_body_entered"]
 [connection signal="body_entered" from="InteractiveZones/SizeDownZone" to="scientist" method="_on_size_down_zone_body_entered"]
+[connection signal="body_entered" from="InteractiveZones/PetriZone" to="scientist" method="_on_petri_zone_body_entered"]
