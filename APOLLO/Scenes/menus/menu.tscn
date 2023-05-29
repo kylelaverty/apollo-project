@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpe5a2ii7ds2i"]
 
 [ext_resource type="Script" path="res://Scenes/menus/menu.gd" id="1_hqg5c"]
-[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_1g0m2"]
+[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://Assets/vfx/menus/blue_button02.png" id="2_1g0m2"]
 [ext_resource type="PackedScene" uid="uid://u8nxi8olif37" path="res://Scenes/menus/ButtonClick.tscn" id="3_3owql"]
 [ext_resource type="PackedScene" uid="uid://cuvmqsin8iyjg" path="res://Scenes/menus/Version.tscn" id="3_t8nbv"]
-[ext_resource type="Texture2D" uid="uid://drue3pn331lvp" path="res://assets/vfx/menus/players_1.png" id="5_ft6vb"]
-[ext_resource type="Texture2D" uid="uid://d22fojqhdatmw" path="res://assets/vfx/menus/light_text.png" id="6_uisiy"]
+[ext_resource type="Texture2D" uid="uid://drue3pn331lvp" path="res://Assets/vfx/menus/players_1.png" id="5_ft6vb"]
+[ext_resource type="Texture2D" uid="uid://d22fojqhdatmw" path="res://Assets/vfx/menus/light_text.png" id="6_uisiy"]
 
 [node name="menu" type="Control"]
 layout_mode = 3

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cndmo8r2o6aur"
-path="res://.godot/imported/scientist-hazmat_11.png-73a43e36914ece5f9d5793383c18ff9b.ctex"
+uid="uid://20ujxq64jqkv"
+path="res://.godot/imported/creature-sheet.png-d19c4f97ff6d6476f94d8e4019860540.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/vfx/lab/scientist-hazmat/scientist-hazmat_11.png"
-dest_files=["res://.godot/imported/scientist-hazmat_11.png-73a43e36914ece5f9d5793383c18ff9b.ctex"]
+source_file="res://Assets/vfx/petriDish/creature-sheet.png"
+dest_files=["res://.godot/imported/creature-sheet.png-d19c4f97ff6d6476f94d8e4019860540.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
