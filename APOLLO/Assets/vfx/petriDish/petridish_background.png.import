@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnwjw6tryjvkj"
-path="res://.godot/imported/petridish_background.png-e7a13e4ecc61852823e2f1406cadff2b.ctex"
+path="res://.godot/imported/petridish_background.png-e06776431e61b66379811633a3618068.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vfx/petriDish/petridish_background.png"
-dest_files=["res://.godot/imported/petridish_background.png-e7a13e4ecc61852823e2f1406cadff2b.ctex"]
+source_file="res://Assets/vfx/petriDish/petridish_background.png"
+dest_files=["res://.godot/imported/petridish_background.png-e06776431e61b66379811633a3618068.ctex"]
 
 [params]
 

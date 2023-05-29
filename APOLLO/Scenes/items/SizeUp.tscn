@@ -6,6 +6,8 @@
 radius = 19.2354
 
 [node name="SizeUp" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_5ec51")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfipreii2of1k"
-path="res://.godot/imported/greenSheet.png-4150b36eb59f48d049a3c454687116ae.ctex"
+path="res://.godot/imported/greenSheet.png-db82aba2f79a3ea758921e9f9ca370c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vfx/menus/greenSheet.png"
-dest_files=["res://.godot/imported/greenSheet.png-4150b36eb59f48d049a3c454687116ae.ctex"]
+source_file="res://Assets/vfx/menus/greenSheet.png"
+dest_files=["res://.godot/imported/greenSheet.png-db82aba2f79a3ea758921e9f9ca370c0.ctex"]
 
 [params]
 

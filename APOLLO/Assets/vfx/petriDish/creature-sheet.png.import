@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://20ujxq64jqkv"
-path="res://.godot/imported/creature-sheet.png-f88ddca33316b2e3319a781f131ee511.ctex"
+path="res://.godot/imported/creature-sheet.png-d19c4f97ff6d6476f94d8e4019860540.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vfx/petriDish/creature-sheet.png"
-dest_files=["res://.godot/imported/creature-sheet.png-f88ddca33316b2e3319a781f131ee511.ctex"]
+source_file="res://Assets/vfx/petriDish/creature-sheet.png"
+dest_files=["res://.godot/imported/creature-sheet.png-d19c4f97ff6d6476f94d8e4019860540.ctex"]
 
 [params]
 

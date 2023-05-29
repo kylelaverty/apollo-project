@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3eenp5rhm4md"
-path="res://.godot/imported/redSheet.png-471b2074d7156c526009f3823cebc396.ctex"
+path="res://.godot/imported/redSheet.png-18161e808ce19e0f788953b9bd70b0dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vfx/menus/redSheet.png"
-dest_files=["res://.godot/imported/redSheet.png-471b2074d7156c526009f3823cebc396.ctex"]
+source_file="res://Assets/vfx/menus/redSheet.png"
+dest_files=["res://.godot/imported/redSheet.png-18161e808ce19e0f788953b9bd70b0dc.ctex"]
 
 [params]
 

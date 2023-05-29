@@ -3,11 +3,15 @@ extends CharacterBody2D
 @export var isSelected = false
 @export var speed = 300.0
 @export var doubling_rate = 8.0
+@export var tempBonus = 0
 var splitTimer = 0.0
+
+const SpeedBonus = preload("res://Scenes/items/SpeedUp.tscn")
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
+	
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
@@ -29,3 +33,25 @@ func _physics_process(delta):
 	if isSelected:
 		get_input()
 		move_and_slide()
+
+
+func _on_area_2d_body_entered(body):
+	match body.get_parent().get_name():
+		"SpeedBonus":
+			speed += 100.0
+			body.queue_free()
+		"SpeedMalus":
+			speed -= 100.0
+			body.queue_free()
+		"HeatBonus":
+			tempBonus += 1
+			body.queue_free()
+		"HeatMalus":
+			tempBonus -= 1
+			body.queue_free()
+		"SizeBonus":
+			apply_scale(scale * 1.5)
+			body.queue_free()
+		"SizeMalus":
+			apply_scale(scale / 1.5)
+			body.queue_free()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnxl3ugeexa2g"]
+[gd_scene load_steps=8 format=3 uid="uid://cnxl3ugeexa2g"]
 
 [ext_resource type="PackedScene" uid="uid://40yhigj832fb" path="res://Scenes/Specimens/Bacteria_A.tscn" id="1_20lrb"]
 [ext_resource type="Script" path="res://Scenes/PetriDish.gd" id="1_xrpdd"]
 [ext_resource type="Resource" uid="uid://diwkrc28qvanr" path="res://test_inv.tres" id="2_yrepk"]
+[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="4_0epu1"]
 [ext_resource type="PackedScene" uid="uid://bemmwchdv413i" path="res://Scenes/characters/InGameMenu.tscn" id="4_n84d2"]
-[ext_resource type="Texture2D" uid="uid://dnwjw6tryjvkj" path="res://assets/vfx/petriDish/petridish_background.png" id="5_cnov8"]
+[ext_resource type="Texture2D" uid="uid://dnwjw6tryjvkj" path="res://Assets/vfx/petriDish/petridish_background.png" id="5_cnov8"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kubco"]
 size = Vector2(3840, 2160)
@@ -23,7 +24,13 @@ texture = SubResource("PlaceholderTexture2D_kubco")
 position = Vector2(2, -1)
 texture = ExtResource("5_cnov8")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="PlayerController" type="Camera2D" parent="."]
+process_callback = 0
+limit_left = -1000
+limit_top = -1000
+limit_right = 1000
+limit_bottom = 1000
+script = ExtResource("4_0epu1")
 
 [node name="Team1" type="Node2D" parent="."]
 
@@ -34,3 +41,39 @@ texture = ExtResource("5_cnov8")
 [node name="InGameMenu" parent="CanvasLayer" instance=ExtResource("4_n84d2")]
 offset_left = 1222.0
 offset_bottom = -659.0
+
+[node name="SpeedBonus" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SpeedMalus" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeatBonus" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeatMalus" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SizeBonus" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SizeMalus" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
