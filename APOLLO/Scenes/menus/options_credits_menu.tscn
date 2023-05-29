@@ -82,7 +82,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "Kenney.nl
-Land of Pixels - Laboratory Tileset (marceles)"
+Land of Pixels - Laboratory Tileset (marceles)
+Apollo Icon (iconduck.com)"
 
 [node name="SoundAssetsLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

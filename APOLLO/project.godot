@@ -13,7 +13,7 @@ config_version=5
 config/name="APOLLO"
 run/main_scene="res://Scenes/menus/menu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://assets/vfx/apollo.256x256.png"
 
 [display]
 

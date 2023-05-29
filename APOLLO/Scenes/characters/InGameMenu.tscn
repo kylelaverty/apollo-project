@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bemmwchdv413i"]
+[gd_scene load_steps=4 format=3 uid="uid://bemmwchdv413i"]
 
 [ext_resource type="Texture2D" uid="uid://dyeoivwk43d1y" path="res://assets/vfx/menus/home.png" id="1_3jpa5"]
 [ext_resource type="Script" path="res://Scenes/characters/InGameMenu.gd" id="1_fpv14"]
+[ext_resource type="PackedScene" uid="uid://u8nxi8olif37" path="res://Scenes/menus/ButtonClick.tscn" id="3_c8371"]
 
 [node name="InGameMenu" type="Control"]
 layout_mode = 3
@@ -23,5 +24,7 @@ grow_horizontal = 0
 icon = ExtResource("1_3jpa5")
 flat = true
 icon_alignment = 1
+
+[node name="ButtonClick" parent="." instance=ExtResource("3_c8371")]
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

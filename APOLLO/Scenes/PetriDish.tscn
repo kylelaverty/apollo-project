@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnxl3ugeexa2g"]
+[gd_scene load_steps=6 format=3 uid="uid://cnxl3ugeexa2g"]
 
 [ext_resource type="PackedScene" uid="uid://40yhigj832fb" path="res://Scenes/Specimens/Bacteria_A.tscn" id="1_20lrb"]
 [ext_resource type="Script" path="res://Scenes/PetriDish.gd" id="1_xrpdd"]
 [ext_resource type="Resource" uid="uid://diwkrc28qvanr" path="res://test_inv.tres" id="2_yrepk"]
+[ext_resource type="PackedScene" uid="uid://bemmwchdv413i" path="res://Scenes/characters/InGameMenu.tscn" id="4_n84d2"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kubco"]
 size = Vector2(3840, 2160)
@@ -20,3 +21,9 @@ texture = SubResource("PlaceholderTexture2D_kubco")
 [node name="Team1" type="Node2D" parent="."]
 
 [node name="Bacteria_A" parent="Team1" instance=ExtResource("1_20lrb")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InGameMenu" parent="CanvasLayer" instance=ExtResource("4_n84d2")]
+offset_left = 1223.0
+offset_bottom = -659.0
