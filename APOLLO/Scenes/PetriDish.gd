@@ -22,7 +22,7 @@ func _ready() -> void:
 
 		while i.quantity > 0:
 			var item = itemDrop.instantiate()
-			item.position = Vector2(randi_range(-1000, 1000), randi_range(-800, 800))
+			item.position = Vector2(randi_range(-800, 800), randi_range(-800, 800))
 			add_child(item)
 			i.set_quantity(i.quantity-1)
 			inventory_data.inventory_updated.emit(inventory_data)
