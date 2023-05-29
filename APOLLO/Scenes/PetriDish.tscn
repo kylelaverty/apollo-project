@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnxl3ugeexa2g"]
+[gd_scene load_steps=7 format=3 uid="uid://cnxl3ugeexa2g"]
 
 [ext_resource type="PackedScene" uid="uid://40yhigj832fb" path="res://Scenes/Specimens/Bacteria_A.tscn" id="1_20lrb"]
 [ext_resource type="Script" path="res://Scenes/PetriDish.gd" id="1_xrpdd"]
 [ext_resource type="Resource" uid="uid://diwkrc28qvanr" path="res://test_inv.tres" id="2_yrepk"]
 [ext_resource type="PackedScene" uid="uid://bemmwchdv413i" path="res://Scenes/characters/InGameMenu.tscn" id="4_n84d2"]
+[ext_resource type="Texture2D" uid="uid://dnwjw6tryjvkj" path="res://assets/vfx/petriDish/petridish_background.png" id="5_cnov8"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kubco"]
 size = Vector2(3840, 2160)
@@ -13,8 +14,14 @@ script = ExtResource("1_xrpdd")
 inventory_data = ExtResource("2_yrepk")
 
 [node name="PlaceholderBG" type="Sprite2D" parent="."]
-self_modulate = Color(0.345098, 0.235294, 0.52549, 1)
+self_modulate = Color(0.0588235, 0.027451, 0.109804, 1)
+position = Vector2(7.5, 0)
+scale = Vector2(0.532031, 1)
 texture = SubResource("PlaceholderTexture2D_kubco")
+
+[node name="PetridishBackground" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+texture = ExtResource("5_cnov8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
