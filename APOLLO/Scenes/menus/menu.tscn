@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpe5a2ii7ds2i"]
+[gd_scene load_steps=7 format=3 uid="uid://bpe5a2ii7ds2i"]
 
 [ext_resource type="Script" path="res://Scenes/menus/menu.gd" id="1_hqg5c"]
-[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://Assets/vfx/menus/blue_button02.png" id="2_1g0m2"]
+[ext_resource type="Texture2D" uid="uid://b8fhfnobxmo54" path="res://assets/vfx/menus/blue_button02.png" id="2_1g0m2"]
 [ext_resource type="PackedScene" uid="uid://u8nxi8olif37" path="res://Scenes/menus/ButtonClick.tscn" id="3_3owql"]
 [ext_resource type="PackedScene" uid="uid://cuvmqsin8iyjg" path="res://Scenes/menus/Version.tscn" id="3_t8nbv"]
+[ext_resource type="Texture2D" uid="uid://drue3pn331lvp" path="res://assets/vfx/menus/players_1.png" id="5_ft6vb"]
+[ext_resource type="Texture2D" uid="uid://d22fojqhdatmw" path="res://assets/vfx/menus/light_text.png" id="6_uisiy"]
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -71,6 +73,14 @@ icon_alignment = 1
 layout_mode = 1
 
 [node name="ButtonClick" parent="." instance=ExtResource("3_3owql")]
+
+[node name="Players1" type="Sprite2D" parent="."]
+position = Vector2(70, 646)
+texture = ExtResource("5_ft6vb")
+
+[node name="LightText" type="Sprite2D" parent="."]
+position = Vector2(204, 647)
+texture = ExtResource("6_uisiy")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

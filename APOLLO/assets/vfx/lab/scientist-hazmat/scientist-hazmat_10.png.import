@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drtnpbvkckgln"
-path="res://.godot/imported/scientist-hazmat_10.png-5243a9a453f1a57a48dd0d1cce917c9d.ctex"
+path="res://.godot/imported/scientist-hazmat_10.png-03c1184eaf88db901871a7e3552fd0b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/vfx/lab/scientist-hazmat/scientist-hazmat_10.png"
-dest_files=["res://.godot/imported/scientist-hazmat_10.png-5243a9a453f1a57a48dd0d1cce917c9d.ctex"]
+source_file="res://assets/vfx/lab/scientist-hazmat/scientist-hazmat_10.png"
+dest_files=["res://.godot/imported/scientist-hazmat_10.png-03c1184eaf88db901871a7e3552fd0b4.ctex"]
 
 [params]
 

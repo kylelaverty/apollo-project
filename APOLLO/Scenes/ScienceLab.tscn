@@ -1,15 +1,16 @@
-[gd_scene load_steps=22 format=3 uid="uid://de37htxj8jj1"]
+[gd_scene load_steps=23 format=3 uid="uid://de37htxj8jj1"]
 
 [ext_resource type="PackedScene" uid="uid://bgpm2fl4ykcvn" path="res://Scenes/characters/scientist.tscn" id="1_dj05u"]
-[ext_resource type="Texture2D" uid="uid://dqgoxc857few8" path="res://Assets/vfx/lab/tilesFloor.png" id="1_go1jf"]
+[ext_resource type="Texture2D" uid="uid://dqgoxc857few8" path="res://assets/vfx/lab/tilesFloor.png" id="1_go1jf"]
 [ext_resource type="Script" path="res://Scenes/ScienceLab.gd" id="1_pj802"]
-[ext_resource type="Texture2D" uid="uid://cuymxsw6kvcdn" path="res://Assets/vfx/lab/tilesStuff.png" id="2_gw7uv"]
-[ext_resource type="Texture2D" uid="uid://cg6rirvsv2gve" path="res://Assets/vfx/lab/tilesWalls.png" id="3_26duk"]
+[ext_resource type="Texture2D" uid="uid://cuymxsw6kvcdn" path="res://assets/vfx/lab/tilesStuff.png" id="2_gw7uv"]
+[ext_resource type="Texture2D" uid="uid://cg6rirvsv2gve" path="res://assets/vfx/lab/tilesWalls.png" id="3_26duk"]
 [ext_resource type="PackedScene" uid="uid://b11vtwpdr5be1" path="res://inventory/inventory.tscn" id="5_5qii0"]
 [ext_resource type="Resource" uid="uid://diwkrc28qvanr" path="res://test_inv.tres" id="5_mx6yn"]
 [ext_resource type="Script" path="res://inventory/inventory_interface.gd" id="7_0ccdq"]
 [ext_resource type="PackedScene" uid="uid://cqdxspikgvo0l" path="res://Scenes/characters/staminabar.tscn" id="7_3fyuj"]
-[ext_resource type="AudioStream" uid="uid://dlit2gx26l62m" path="res://Assets/sfx/lab-music.ogg" id="10_sy5jh"]
+[ext_resource type="PackedScene" uid="uid://bemmwchdv413i" path="res://Scenes/characters/InGameMenu.tscn" id="8_gtxkm"]
+[ext_resource type="AudioStream" uid="uid://dlit2gx26l62m" path="res://assets/sfx/lab-music.ogg" id="10_sy5jh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6oxh2"]
 texture = ExtResource("1_go1jf")
@@ -5813,13 +5814,20 @@ inventory_data = ExtResource("5_mx6yn")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
+[node name="InGameMenu" parent="UI" instance=ExtResource("8_gtxkm")]
+offset_left = 1220.0
+offset_bottom = -655.0
+
 [node name="StaminaBar" parent="UI" instance=ExtResource("7_3fyuj")]
+offset_right = -48.0
 
 [node name="InventoryInterface" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 59.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("7_0ccdq")

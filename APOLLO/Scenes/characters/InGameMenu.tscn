@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bemmwchdv413i"]
+
+[ext_resource type="Texture2D" uid="uid://dyeoivwk43d1y" path="res://assets/vfx/menus/home.png" id="1_3jpa5"]
+[ext_resource type="Script" path="res://Scenes/characters/InGameMenu.gd" id="1_fpv14"]
+
+[node name="InGameMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fpv14")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -58.0
+offset_bottom = 58.0
+grow_horizontal = 0
+icon = ExtResource("1_3jpa5")
+flat = true
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,12 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bfe752dcosdfv"]
 
 [ext_resource type="Script" path="res://item/item_data.gd" id="1_dyoys"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8r787"]
+[ext_resource type="Texture2D" uid="uid://dkd4fql46qkuk" path="res://assets/vfx/lab/items/torch.png" id="2_s8hy6"]
 
 [resource]
 script = ExtResource("1_dyoys")
 name = "Heat Down"
 description = "Decreases the heat level of the cell"
 stackable = true
-texture = SubResource("CompressedTexture2D_8r787")
+texture = ExtResource("2_s8hy6")
