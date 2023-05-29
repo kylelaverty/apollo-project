@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvj08sj1muaev"
-path="res://.godot/imported/left_key.png-d8295adf297f1fbbb2f7819b684f873f.ctex"
+path="res://.godot/imported/left_key.png-fcb7790b0064498855ea0eceaeaac6e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/vfx/menus/controls/left_key.png"
-dest_files=["res://.godot/imported/left_key.png-d8295adf297f1fbbb2f7819b684f873f.ctex"]
+source_file="res://assets/vfx/menus/controls/left_key.png"
+dest_files=["res://.godot/imported/left_key.png-fcb7790b0064498855ea0eceaeaac6e5.ctex"]
 
 [params]
 
