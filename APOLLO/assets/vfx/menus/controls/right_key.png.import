@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkcenujw3otv4"
-path="res://.godot/imported/right_key.png-7558f09f7f69611bdb54e407b048f2a3.ctex"
+path="res://.godot/imported/right_key.png-6ea06f1adf49e267487775b5aefa8b2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/vfx/menus/controls/right_key.png"
-dest_files=["res://.godot/imported/right_key.png-7558f09f7f69611bdb54e407b048f2a3.ctex"]
+source_file="res://assets/vfx/menus/controls/right_key.png"
+dest_files=["res://.godot/imported/right_key.png-6ea06f1adf49e267487775b5aefa8b2b.ctex"]
 
 [params]
 

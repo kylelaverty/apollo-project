@@ -2,6 +2,8 @@ extends Node2D
 
 @export var inventory_data: InventoryData
 
+@onready var _level_timer = $LevelTimer
+
 func _ready() -> void:
 	
 	var itemDrop
@@ -34,3 +36,7 @@ func _ready() -> void:
 			get_node(destination).add_child(item)
 			i.set_quantity(i.quantity-1)
 			inventory_data.inventory_updated.emit(inventory_data)
+
+func _physics_process(_delta):
+	if _level_timer.time_left <= 0:
+		get_tree().change_scene_to_file("res://Scenes/ScienceLab.tscn")

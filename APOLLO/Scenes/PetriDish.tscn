@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://diwkrc28qvanr" path="res://test_inv.tres" id="2_yrepk"]
 [ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="4_0epu1"]
 [ext_resource type="PackedScene" uid="uid://bemmwchdv413i" path="res://Scenes/characters/InGameMenu.tscn" id="4_n84d2"]
-[ext_resource type="Texture2D" uid="uid://dnwjw6tryjvkj" path="res://Assets/vfx/petriDish/petridish_background.png" id="5_cnov8"]
+[ext_resource type="Texture2D" uid="uid://dnwjw6tryjvkj" path="res://assets/vfx/petriDish/petridish_background.png" id="5_cnov8"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_kubco"]
 size = Vector2(3840, 2160)
@@ -77,3 +77,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="LevelTimer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
