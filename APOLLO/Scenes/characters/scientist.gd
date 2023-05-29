@@ -3,16 +3,21 @@ extends CharacterBody2D
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var _footsteps = $Footsteps
 @onready var _footsteps_timer = $FootstepsTimer
+@onready var stamina_bar = $"../UI/StaminaBar"
 
 @export var inventory_data: InventoryData
 
 @export var hazmat: bool = false
 @export var speed: int = 150
 
-@export_category("Effort")
+@export_category("Stamina")
 @export var effort: int = 100
 @export var effort_hazmat: int = 5
 @export var effort_buff: int = 25
+
+func update_Stamina(staminaChange: int):
+	effort = effort - staminaChange
+	stamina_bar.change_stamina(effort)
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -44,47 +49,47 @@ func _physics_process(_delta):
 
 func _on_hazmat_on_zone_body_exited(_body):
 	if hazmat == false && effort > effort_hazmat:
-		effort = effort - effort_hazmat
+		update_Stamina(effort_hazmat)
 	hazmat = true
 
 func _on_hazmat_off_zone_body_exited(_body):
 	if hazmat == true && effort > effort_hazmat:
-		effort = effort - effort_hazmat
+		update_Stamina(effort_hazmat)
 	hazmat = false
 
 func _on_heat_up_zone_body_entered(_body):
 	if effort >= effort_buff:
-		effort = effort - effort_buff
+		update_Stamina(effort_buff)
 		inventory_data.slot_datas[2].set_quantity(inventory_data.slot_datas[2].quantity+1)
 		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_heat_down_zone_body_entered(_body):
 	if effort >= effort_buff:
-		effort = effort - effort_buff
+		update_Stamina(effort_buff)
 		inventory_data.slot_datas[3].set_quantity(inventory_data.slot_datas[3].quantity+1)
 		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_speed_up_zone_body_entered(_body):
 	if effort >= effort_buff:
-		effort = effort - effort_buff
+		update_Stamina(effort_buff)
 		inventory_data.slot_datas[0].set_quantity(inventory_data.slot_datas[0].quantity+1)
 		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_speed_down_zone_body_entered(_body):
 	if effort >= effort_buff:
-		effort = effort - effort_buff
+		update_Stamina(effort_buff)
 		inventory_data.slot_datas[1].set_quantity(inventory_data.slot_datas[1].quantity+1)
 		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_size_up_zone_body_entered(_body):
 	if effort >= effort_buff:
-		effort = effort - effort_buff
+		update_Stamina(effort_buff)
 		inventory_data.slot_datas[4].set_quantity(inventory_data.slot_datas[4].quantity+1)
 		inventory_data.inventory_updated.emit(inventory_data)
 
 func _on_size_down_zone_body_entered(_body):
 	if effort >= effort_buff:
-		effort = effort - effort_buff
+		update_Stamina(effort_buff)
 		inventory_data.slot_datas[5].set_quantity(inventory_data.slot_datas[5].quantity+1)
 		inventory_data.inventory_updated.emit(inventory_data)
 
